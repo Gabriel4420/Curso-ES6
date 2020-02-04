@@ -156,17 +156,21 @@ import api from './api';
 console.log(api.getUserInfo('diego3g'));
 
 //Desafio 
-
-var x = x+1;
+var y = 0;
+var x = y+=1;
 //nova promisse com o nome de delay
-const delay = () => new Promise((resolve) => setTimeout(() => {resolve(x),1000}));
+const delay = () => new Promise((resolve) => setTimeout(resolve,1000));
 
 async function umPorSegundo() {
-    const response = await delay();
+    await delay();
+    console.log('1')
+    await delay();
+    console.log('2')
+    await delay();
+    console.log('3')
+    
 
-    console.log(response);
-    console.log(response);
-    console.log(response);
+    
     
 }
 
